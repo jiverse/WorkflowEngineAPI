@@ -1,3 +1,22 @@
+# Workflow Engine API
+A simple, minimal backend service built using .NET 8 and C# that allows you to:
+
+Define custom workflow state machines (with states and actions)
+
+Start instances of these workflows
+
+Transition between states by performing actions
+
+Track the current state and history of each instance
+
+Tech Stack
+Backend Framework: ASP.NET Core Minimal API (.NET 8)
+
+Language: C#
+
+Tools for testing: Postman / curl / browser
+
+
 # How to Use the Workflow Engine API
 
 This project lets us define custom workflows (like state machines), start new instances of them, and transition between states based on actions.
