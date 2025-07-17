@@ -10,11 +10,11 @@ A simple, minimal backend service built using .NET 8 and C# that allows us to:
 * Track the current state and history of each instance
 
 ## Tech Stack
-Backend Framework: ASP.NET Core Minimal API (.NET 8)
+* Backend Framework: ASP.NET Core Minimal API (.NET 8)
 
-Language: C#
+* Language: C#
 
-Tools for testing: Postman / curl / browser
+* Tools for testing: Postman / curl / browser
 
 
 # How to Use the Workflow Engine API
