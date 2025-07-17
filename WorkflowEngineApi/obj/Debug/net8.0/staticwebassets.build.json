@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AHUHkRddpWzbliCQlPYKeJIf/tBRZcf/FJncLTlk2BY=",
+  "Source": "WorkflowEngineApi",
+  "BasePath": "_content/WorkflowEngineApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
