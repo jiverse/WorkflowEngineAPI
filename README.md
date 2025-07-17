@@ -1,15 +1,12 @@
-# 🛠️ How to Use the Workflow Engine API
+# How to Use the Workflow Engine API
 
-This project lets you define **custom workflows** (like state machines), start new instances of them, and transition between states based on actions.
+This project lets us define custom workflows (like state machines), start new instances of them, and transition between states based on actions.
 
-Here’s a step-by-step guide to get you started:
-
----
 
 ## 1️⃣ Start the API
 
-* Run the project using Visual Studio, `dotnet run`, or from your IDE.
-* Once it’s running, you’ll see something like:
+* Run the project using Visual Studio, `dotnet run`.
+* Once it’s running, we’ll see something like:
 
   ```
   Now listening on: http://localhost:5068
@@ -19,13 +16,13 @@ Here’s a step-by-step guide to get you started:
 
 ## 2️⃣ Create a Workflow Definition
 
-This is where you define your workflow — all the **states** it can be in, and the **actions** that move it from one state to another.
+This is where we define our workflow — all the states it can be in, and the actions that move it from one state to another.
 
-In Postman (or any REST client):
+In Postman:
 
-* **Method:** `POST`
-* **URL:** `http://localhost:5068/workflow-definitions`
-* **Body (JSON):**
+* Method: `POST`
+* URL: `http://localhost:5068/workflow-definitions`
+* Body (JSON):
 
 ```json
 {
@@ -43,18 +40,18 @@ In Postman (or any REST client):
 }
 ```
 
-* You should get a `200 OK` if it works.
+* We will  get a `200 OK` if it works.
 
 ---
 
 ## 3️⃣ Start a New Workflow Instance
 
-Now that your workflow is defined, you can start a new instance of it.
+Now that the workflow is defined, we can start a new instance of it.
 
-* **Method:** `POST`
-* **URL:** `http://localhost:5068/workflow-definitions/my-workflow/start`
+* Method: `POST`
+* URL: `http://localhost:5068/workflow-definitions/my-workflow/start`
 
-You’ll get a response like:
+We’ll get a response like:
 
 ```json
 {
@@ -65,48 +62,48 @@ You’ll get a response like:
 }
 ```
 
-➡️ Copy the `id` from the response. That’s your `instanceId`.
+➡️ Next, we will copy the `id` from the response. And that’s our `instanceId`.
 
 ---
 
 ## 4️⃣ Execute an Action (Transition to the Next State)
 
-You can now move this instance from one state to the next using an action.
+We can now move this instance from one state to the next using an action.
 
 * To move from **start** to **middle**:
 
-  * **Method:** `POST`
-  * **URL:**
+  * Method: `POST`
+  * URL:
 
     ```
     http://localhost:5068/instances/{instanceId}/actions/begin
     ```
 
-* Then to move from **middle** to **end**:
+* Then we will move from **middle** to **end**:
 
-  * **POST**
-  * **URL:**
+  * POST
+  * URL:
 
     ```
     http://localhost:5068/instances/{instanceId}/actions/finish
     ```
 
-Just replace `{instanceId}` with the ID you copied earlier.
+Just replace the `{instanceId}` with the ID  copied earlier.
 
 ---
 
 ## 5️⃣ View the Current State and History
 
-Want to see what state your instance is in?
+We can see what state our instance is in by usin the below action.
 
-* **Method:** `GET`
-* **URL:**
+* Method: `GET`
+* URL:
 
   ```
   http://localhost:5068/instances/{instanceId}
   ```
 
-You’ll get something like:
+We’ll get something like:
 
 ```json
 {
@@ -118,18 +115,4 @@ You’ll get something like:
     { "actionId": "finish", "timestamp": "..." }
   ]
 }
-```
-
----
-
-## 🎉 Done!
-
-That’s it! You’ve:
-
-1. Created a workflow definition.
-2. Started a workflow instance.
-3. Moved it through defined states using actions.
-4. Viewed the current state and history.
-
-Happy experimenting!
 
