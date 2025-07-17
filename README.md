@@ -94,7 +94,7 @@ Just replace the `{instanceId}` with the ID  copied earlier.
 
 ## 5️⃣ View the Current State and History
 
-We can see what state our instance is in by usin the below action.
+We can see what state our instance is in by using the below action.
 
 * Method: `GET`
 * URL:
